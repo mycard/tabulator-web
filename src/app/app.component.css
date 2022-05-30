@@ -124,3 +124,10 @@ main {
 .lh-tight {
   line-height: 1.25;
 }
+
+.mclogo {
+  width: 45px;
+}
+.fs-4 {
+  margin-left: 8px;
+}
