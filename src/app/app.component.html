@@ -7,9 +7,21 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li *ngFor="let menu of menus" class="nav-item">
-        <a href="#" class="nav-link" routerLinkActive="active link-dark" [routerLink]="'/' + menu.path" aria-current="page">
+        <a href="#" class="nav-link link-dark" routerLinkActive="active" [routerLink]="'/' + menu.path" aria-current="page">
           {{menu.title}}
         </a>
+      </li>
+      <hr>
+      <li ngbDropdown class="nav-item">
+        <a class="nav-link link-dark" aria-current="page" ngbDropdownToggle>
+          相关平台
+        </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <a ngbDropdownItem href="https://ygobbs.com/">社区</a>
+          <a ngbDropdownItem href="https://mycard.moe/ygopro/arena/">决斗数据库</a>
+          <a ngbDropdownItem href="https://event.ygobbs.com/">赛事系统</a>
+          <a ngbDropdownItem href="https://rep.ygobbs.com/">战报系统</a>
+        </div>
       </li>
     </ul>
     <hr>

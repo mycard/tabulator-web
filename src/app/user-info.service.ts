@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MyCardSSOUser } from './utility/MyCardSSOUser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { loginUrl } from './utility/login-url';
 import { Buffer } from 'buffer';
 
@@ -10,7 +10,7 @@ import { Buffer } from 'buffer';
 export class UserInfoService {
   user?: MyCardSSOUser;
 
-  constructor() {
+  constructor(private router: Router) {
     this.initUser();
   }
 
@@ -40,9 +40,10 @@ export class UserInfoService {
     window.location.replace(loginUrl(currentUrl));
   }
 
-  logout() {
+  async logout() {
     this.user = undefined;
     localStorage.removeItem('login');
-    return this.login();
+    await this.router.navigateByUrl('/tournament');
+    window.location.reload();
   }
 }

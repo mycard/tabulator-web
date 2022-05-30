@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
     const tooltipTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="tooltip"]')
     );
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    tooltipTriggerList.forEach((tooltipTriggerEl) => {
       new Tooltip(tooltipTriggerEl);
     });
   }
