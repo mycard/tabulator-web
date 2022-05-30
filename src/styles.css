@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap';
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+
+/*干掉站长统计的文本*/
+a[title="站长统计"] {
+  display: none;
+}
+
+/*标题*/
+h1.title {
+  font-family: 'Helvetica Neue', Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-size: 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.index .navbar-nav>li.index>a, .index .navbar-nav>li.index>a:focus, .index .navbar-nav>li.index>a:hover,
+.download .navbar-nav>li.download>a, .download .navbar-nav>li.download>a:focus, .download .navbar-nav>li.download>a:hover,
+.usage .navbar-nav>li.usage>a, .usage .navbar-nav>li.usage>a:focus, .usage .navbar-nav>li.usage>a:hover,
+.changelog .navbar-nav>li.changelog>a, .changelog .navbar-nav>li.changelog>a:focus, .changelog .navbar-nav>li.changelog>a:hover,
+.bugs .navbar-nav>li.bugs>a, .bugs .navbar-nav>li.bugs>a:focus, .bugs .navbar-nav>li.bugs>a:hover,
+.lab .navbar-nav>li.lab>a, .lab .navbar-nav>li.lab>a:focus, .lab .navbar-nav>li.lab>a:hover,
+.pre .navbar-nav>li.pre>a, .pre .navbar-nav>li.pre>a:focus, .pre .navbar-nav>li.pre>a:hover
+{
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+h1.title .date {
+  font-size: 14px;
+  float: right;
+  padding-top: 10px;
+}
+
+h2.title {
+  font-family: 'Helvetica Neue', Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-size: 16px;
+  padding: 8px 0 8px 8px;
+  border-left: 2px solid #ddd;
+}
+
+footer {
+  /*margin: 100px 0 10px 0;*/
+  color: #767676;
+  text-align: center;
+}

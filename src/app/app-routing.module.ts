@@ -1,10 +1,27 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { TournamentComponent } from './tournament/tournament.component';
 
-const routes: Routes = [];
+export interface Menu extends Route {
+  title: string;
+}
+
+export const Menus: Menu[] = [
+  { path: 'tournament', component: TournamentComponent, title: '比赛' },
+];
+
+const routes: Routes = [
+  ...Menus,
+  { path: '', redirectTo: 'tournament', pathMatch: 'full' },
+  { path: '**', redirectTo: 'tournament', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: 'tournament',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
