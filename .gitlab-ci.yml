@@ -30,10 +30,6 @@ build:
     paths:
       - dist/
 
-test:
-  extends: .build_base
-  script: npm run test
-
 #upload_to_minio:
 #  stage: deploy
 #  dependencies:
