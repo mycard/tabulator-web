@@ -6,10 +6,19 @@ import { AppComponent } from './app.component';
 import { ToastComponent } from './toast/toast.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ApiModule } from './api/api.module';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent, ToastComponent, TournamentComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    ApiModule.forRoot({
+      rootUrl: environment.production ? '' : 'http://localhost:3000',
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

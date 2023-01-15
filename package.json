@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gen": "ng-openapi-gen --input http://localhost:3000/docs-json --output src/app/api"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ng-openapi-gen": "^0.23.0",
     "typescript": "~4.6.2"
   }
 }
